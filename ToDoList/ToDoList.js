@@ -1,3 +1,5 @@
+//version with array
+
 const createButton = (buttonName, task) =>{
     let button = document.createElement('div');
     button.className = 'buttons' + buttonName;
