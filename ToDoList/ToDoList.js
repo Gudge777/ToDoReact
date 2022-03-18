@@ -1,8 +1,10 @@
-const createButton = (buttonName, task) =>{
-    let button = document.createElement('div');
-    button.className = 'buttons' + buttonName;
-    button.innerHTML = buttonName;
-    button.onclick = () => buttonName(task.name);
+let createNewTask = (taskName) =>{
+    if (localStorage.getItem(taskName) || taskName === '') return;
+    let task = {};
+    task.name = taskName;
+    task.completed = false;
+    localStorage.setItem(taskName, JSON.stringify(task));
+    showNewTask(localStorage.getItem(taskName));
 }
 
 let showNewTask = (taskObj) =>{
@@ -29,6 +31,12 @@ let showNewTask = (taskObj) =>{
     if (task.completed) div.style.backgroundColor = 'gray';
 }
 
+let createTask = () =>{
+    let taskName = document.getElementById('inputTask').value;
+    document.getElementById('inputTask').value = '';
+    createNewTask(taskName);
+}
+
 let deleteTask = (id) =>{
     let taskDiv = document.getElementById(id);
     taskDiv.remove();
@@ -50,3 +58,17 @@ let deleteAllTasks = () =>{
     taskDiv.innerHTML = '';
     localStorage.clear();
 }
+
+let showTasks = () =>{
+    for (let i = 0; i < localStorage.length; i++){
+        let task = localStorage.key(i);
+        showNewTask(localStorage.getItem(task));
+    }
+    for (let i = 0; i < localStorage.length; i++){
+        let key = localStorage.key(i);
+        let task =JSON.parse(localStorage.getItem(key));
+        if (task.completed) completeTask(key);
+    }
+}
+
+showTasks();
