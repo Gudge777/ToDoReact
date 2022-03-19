@@ -1,13 +1,51 @@
 //version with array
 
-const createButton = (buttonName, task) =>{
+const createButton = (buttonName, taskObject) =>{
     let button = document.createElement('div');
-    button.className = 'buttons' + buttonName;
+    button.className = buttonName + ' buttons';
+    console.log(button.className);
     button.innerHTML = buttonName;
-    button.onclick = () => buttonName(task.name);
+    //button.onclick = () => buttonName(taskObject.name);
+    return(button);
 }
 
-let showNewTask = (taskObj) =>{
+const showTask = (taskObject) =>{
+    let taskDiv = document.createElement('div');
+    taskDiv.className = 'taskDivCss';
+    taskDiv.id = taskObject.name;
+    let divWithTaskName = document.createElement('div');
+    divWithTaskName.className = 'taskSubDiv';
+    divWithTaskName.innerHTML = taskObject.name;
+    let deleteButton = createButton('Delete', taskObject);
+    taskDiv.append(divWithTaskName, deleteButton);
+
+    if (!taskObject.completed) {
+        let completeButton = createButton('Complete', taskObject);
+        taskDiv.append(completeButton);
+        document.getElementById('taskDivs').append(taskDiv);
+    }else{
+        taskDiv.style.backgroundColor = 'gray';
+        document.getElementById('completedTaskDivs').append(taskDiv);
+    }
+}
+
+const getInputValue = () =>{
+    let inputValue = document.getElementById('inputTask').value;
+    document.getElementById('inputTask').value = '';
+    return(inputValue);
+}
+
+const addNewTask = () =>{
+    let taskName = getInputValue();
+    if (!taskName) return;
+    let tasksArray = JSON.parse(localStorage.getItem('tasksArray)')) || [{}];
+    let taskObject = {name: taskName, completed: false};
+    tasksArray.push(taskObject);
+    localStorage.setItem('tasksArray', JSON.stringify(tasksArray));
+    showTask(taskObject);
+}
+
+/*let showNewTask = (taskObj) =>{
     let task = JSON.parse(taskObj);
     let div = document.createElement('div');
     div.className = 'taskDivCss';
@@ -29,15 +67,15 @@ let showNewTask = (taskObj) =>{
     let taskDivs = document.getElementById('taskDivs');
     taskDivs.append(div);
     if (task.completed) div.style.backgroundColor = 'gray';
-}
+}*/
 
-let deleteTask = (id) =>{
+let Delete = (id) =>{
     let taskDiv = document.getElementById(id);
     taskDiv.remove();
     localStorage.removeItem(id);
 }
 
-let completeTask = (id) =>{
+let Complete = (id) =>{
     let taskDiv = document.getElementById(id);
     taskDiv.remove();
     let task = JSON.parse(localStorage.getItem(id));
@@ -50,5 +88,7 @@ let completeTask = (id) =>{
 let deleteAllTasks = () =>{
     let taskDiv = document.getElementById('taskDivs');
     taskDiv.innerHTML = '';
+    let completedTaskDivs = document.getElementById('completedTaskDivs');
+    completedTaskDivs.innerHTML = '';
     localStorage.clear();
 }
