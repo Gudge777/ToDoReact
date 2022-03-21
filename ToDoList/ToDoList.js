@@ -1,4 +1,3 @@
-
 const getInputValue = () =>{
     let inputValue = document.getElementById('inputTask').value;
     document.getElementById('inputTask').value = '';
@@ -11,7 +10,7 @@ const reRender = () => {
     render();
 }
 
-const addNewTask = () =>{
+const addNewTask = () => {
     let newTaskName = getInputValue();
     if (!newTaskName) return;
     let newTaskObj = {
@@ -21,17 +20,17 @@ const addNewTask = () =>{
     tasksArray.push(newTaskObj);
     localStorage.setItem('tasksString', JSON.stringify(tasksArray));
     reRender();
+}
 
 const DeleteOrComplete = (id, buttonName) =>{
     let index = tasksArray.findIndex((item) => item.name === id);
-    console.log(index, buttonName);
     if (buttonName === 'Delete') tasksArray.splice(index, 1);
     else if (buttonName === 'Complete') tasksArray[index].status = 1;
     localStorage.setItem('tasksString', JSON.stringify(tasksArray));
     reRender();
 }
 
-let deleteAllTasks = () =>{
+const deleteAllTasks = () =>{
     let taskDiv = document.getElementById('taskDivs');
     taskDiv.innerHTML = '';
     let completedTaskDivs = document.getElementById('completedTaskDivs');
