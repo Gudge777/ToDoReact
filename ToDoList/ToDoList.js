@@ -1,73 +1,34 @@
-//version with array
-
-const createButton = (buttonName, taskObject, onClick) =>{
-    let button = document.createElement('div');
-    button.className = buttonName + ' buttons';
-    button.innerHTML = buttonName;
-    button.onclick = () => onClick(taskObject.name);
-    return(button);
-}
-
-const showTask = (taskObject) =>{
-    let taskDiv = document.createElement('div');
-    taskDiv.className = 'taskDivCss';
-    taskDiv.id = taskObject.name;
-    let divWithTaskName = document.createElement('div');
-    divWithTaskName.className = 'taskSubDiv';
-    divWithTaskName.innerHTML = taskObject.name;
-    let deleteButton = createButton('Delete', taskObject, Delete);
-    taskDiv.append(divWithTaskName, deleteButton);
-
-    if (taskObject.completed === false) {
-        let completeButton = createButton('Complete', taskObject, Complete);
-        taskDiv.append(completeButton);
-        let taskDivs = document.getElementById('taskDivs');
-        taskDivs.append(taskDiv);
-    }else if (taskObject.completed === true){
-        taskDiv.style.backgroundColor = 'gray';
-        let completedTaskDivs = document.getElementById('completedTaskDivs');
-        completedTaskDivs.append(taskDiv);
-    }
-}
-
 const getInputValue = () =>{
     let inputValue = document.getElementById('inputTask').value;
     document.getElementById('inputTask').value = '';
     return(inputValue);
 }
 
+const reRender = () => {
+    document.getElementById('taskDivs').innerHTML = '';
+    document.getElementById('completedTaskDivs').innerHTML = '';
+    render();
+}
+
 const addNewTask = () =>{
-    let taskName = getInputValue();
-    if ( !taskName ) return;
-    let tasksArray = [{}];
-    tasksArray = JSON.parse(localStorage.getItem('tasksArray)')) || [];
-    let taskObject = {name: taskName, completed: false};
-    tasksArray.push(taskObject);
-    localStorage.setItem('tasksArray', JSON.stringify(tasksArray));
-    showTask(taskObject);
+    let newTaskName = getInputValue();
+    if (!newTaskName) return;
+    let newTaskObj = {
+        name: newTaskName,
+        status: 0,
+    }
+    tasksArray.push(newTaskObj);
+    localStorage.setItem('tasksString', JSON.stringify(tasksArray));
+    reRender();
 }
 
-let Delete = (id) =>{
-    let taskDiv = document.getElementById(id);
-    taskDiv.remove();
-    let tasksArray = JSON.parse(localStorage.getItem('tasksArray'));
-    for (let i = 0; i < tasksArray.length; i++){
-        if (tasksArray[i].name === id) tasksArray.splice(i, 1);
-    }
-    localStorage.setItem('tasksArray', JSON.stringify(tasksArray));
-}
-
-let Complete = (id) =>{
-    let taskDiv = document.getElementById(id);
-    taskDiv.remove();
-    let tasksArray = JSON.parse(localStorage.getItem('tasksArray'));
-    for (let i = 0; i < tasksArray.length; i++){
-        if (tasksArray[i].name === id) {
-            tasksArray[i].completed = true;
-            showTask(tasksArray[i]);
-        }
-    }
-    localStorage.setItem('tasksArray', JSON.stringify(tasksArray));
+const DeleteOrComplete = (id, buttonName) =>{
+    let index = tasksArray.findIndex((item) => item.name === id);
+    console.log(index, buttonName);
+    if (buttonName === 'Delete') tasksArray.splice(index, 1);
+    else if (buttonName === 'Complete') tasksArray[index].status = 1;
+    localStorage.setItem('tasksString', JSON.stringify(tasksArray));
+    reRender();
 }
 
 let deleteAllTasks = () =>{
@@ -78,11 +39,35 @@ let deleteAllTasks = () =>{
     localStorage.clear();
 }
 
-const showAllTasks = () =>{
-    let tasksArray = JSON.parse(localStorage.getItem('tasksArray')) || [];
-    for (let i = 0; i < tasksArray.length; i++){
-        showTask(tasksArray[i]);
-    }
+const createButton = (buttonName, taskName, onClick) =>{
+    let button = document.createElement('div');
+    button.className = buttonName + ' buttons';
+    button.innerHTML = buttonName;
+    button.onclick = () => onClick(taskName, buttonName);
+    return(button);
 }
 
-showAllTasks();
+const render = () =>{
+    tasksArray.map((item) => {
+        let taskDiv = document.createElement('div');
+        taskDiv.className = 'taskDivCss';
+        taskDiv.id = item.name;
+        let divWithTaskName = document.createElement('div');
+        divWithTaskName.className = 'taskSubDiv';
+        divWithTaskName.innerHTML = item.name;
+        let deleteButton = createButton('Delete', item.name, DeleteOrComplete);
+        taskDiv.append(divWithTaskName, deleteButton);
+
+        if (item.status === 1){
+            taskDiv.style.backgroundColor = 'gray';
+            document.getElementById('completedTaskDivs').append(taskDiv);
+        } else {
+            let completeButton = createButton('Complete', item.name, DeleteOrComplete);
+            taskDiv.append(completeButton);
+            document.getElementById('taskDivs').append(taskDiv);
+        }
+    })
+}
+
+let tasksArray = JSON.parse(localStorage.getItem('tasksString')) || [];
+render();
