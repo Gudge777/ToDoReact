@@ -1,3 +1,4 @@
+
 const getInputValue = () =>{
     let inputValue = document.getElementById('inputTask').value;
     document.getElementById('inputTask').value = '';
@@ -20,7 +21,6 @@ const addNewTask = () =>{
     tasksArray.push(newTaskObj);
     localStorage.setItem('tasksString', JSON.stringify(tasksArray));
     reRender();
-}
 
 const DeleteOrComplete = (id, buttonName) =>{
     let index = tasksArray.findIndex((item) => item.name === id);
