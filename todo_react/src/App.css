@@ -1,0 +1,8 @@
+.allPageDiv {
+    box-shadow: 0 0 10px 10px lavender;
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 10px;
+}

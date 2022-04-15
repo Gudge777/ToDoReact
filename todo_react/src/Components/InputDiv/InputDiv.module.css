@@ -1,0 +1,9 @@
+.addButton {
+    background-color: lightgreen;
+    box-shadow: 1px 1px 3px 3px lavender;
+    border-radius: 5px;
+}
+
+#input {
+    width: 80%;
+}
