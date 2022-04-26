@@ -1,14 +1,17 @@
 import React from "react";
 import classes from './InputDiv.module.css';
-import addNewTask from "./InputDiv.js";
+import addNewTask from '../../utilites/addNewTask'
 
-const InputDiv = () =>{
+const InputDiv = (props) =>{
+    let inputsRef = React.createRef();
     return (
         <div>
-            <input id={classes.input}/>
-            <button className={classes.addButton} onClick={addNewTask()}>Add</button>
+            <input ref={inputsRef}/>
+            <button className={classes.addButton} onClick={() => addNewTask(props.tasks, inputsRef.current.value)}>
+                Add
+            </button>
         </div>
     );
-}
+};
 
 export default InputDiv;

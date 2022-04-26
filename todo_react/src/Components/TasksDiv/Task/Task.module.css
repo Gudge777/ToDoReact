@@ -1,0 +1,24 @@
+.task {
+    display: grid;
+    grid-template-columns: 80% 1fr;
+    margin: 10px 10px 10px 10px;
+}
+
+.taskName {
+    box-shadow: 1px 1px 3px 3px lavender;
+    border-radius: 5px;
+}
+
+.completed {
+    background-color: gray;
+}
+
+.uncompleted {
+    background-color: lavender;
+}
+
+.deleteButton {
+    background-color: red;
+    box-shadow: 1px 1px 3px 3px lavender;
+    border-radius: 5px;
+}
