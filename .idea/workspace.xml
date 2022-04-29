@@ -19,19 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76b45fd0-1f9a-4d8c-a746-8b8bda9406b5" name="Default Changelist" comment="null">
-      <change afterPath="$PROJECT_DIR$/todo_react/src/Components/TasksDiv/Task/Task.jsx" afterDir="false" />
+    <list default="true" id="76b45fd0-1f9a-4d8c-a746-8b8bda9406b5" name="Default Changelist" comment="import isn't working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_react/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/todo_react/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_react/src/Components/CompletedTasks/CompletedTasks.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_react/src/Components/CompletedTasks/CompletedTasks.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/todo_react/src/Components/TasksDiv/TasksDiv.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_react/src/Components/InputDiv/InputDiv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_react/src/Components/InputDiv/InputDiv.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/todo_react/src/Components/InputDiv/InputDiv.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_react/src/Components/Task/Task.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_react/src/Components/Task/Task.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/todo_react/src/Components/TasksDiv/Task/Task.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_react/src/Components/UncompletedTasks/UncompletedTasks.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_react/src/Components/UncompletedTasks/UncompletedTasks.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_react/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/todo_react/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +42,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="16.14.2" />
     <property name="last_opened_file_path" value="$USER_HOME$/programs/node-v16.14.2-linux-x64/bin" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -81,7 +71,8 @@
       <workItem from="1650445461351" duration="11146000" />
       <workItem from="1650469177817" duration="6777000" />
       <workItem from="1650537456600" duration="7259000" />
-      <workItem from="1650965768680" duration="6614000" />
+      <workItem from="1650965768680" duration="7808000" />
+      <workItem from="1651226761215" duration="736000" />
     </task>
     <task id="LOCAL-00001" summary="null">
       <created>1650043024408</created>
@@ -90,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650043024408</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="import isn't working">
+      <created>1650978220897</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650978220897</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,16 +108,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="null" />
-    <option name="LAST_COMMIT_MESSAGE" value="null" />
+    <MESSAGE value="import isn't working" />
+    <option name="LAST_COMMIT_MESSAGE" value="import isn't working" />
   </component>
   <component name="WindowStateProjectService">
     <state x="378" y="215" width="618" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1650537920072">
       <screen x="72" y="27" width="1208" height="773" />
     </state>
     <state x="378" y="215" width="618" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1208.773@72.27.1208.773" timestamp="1650537920072" />
-    <state x="271" y="149" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1650043046665">
+    <state x="165" y="48" width="1022" height="737" key="SettingsEditor" timestamp="1650979411038">
       <screen x="72" y="27" width="1208" height="773" />
     </state>
-    <state x="271" y="149" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1208.773@72.27.1208.773" timestamp="1650043046665" />
+    <state x="165" y="48" width="1022" height="737" key="SettingsEditor/72.27.1208.773@72.27.1208.773" timestamp="1650979411038" />
+    <state x="271" y="149" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1650978390652">
+      <screen x="72" y="27" width="1208" height="773" />
+    </state>
+    <state x="271" y="149" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1208.773@72.27.1208.773" timestamp="1650978390652" />
   </component>
 </project>

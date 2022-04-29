@@ -1,0 +1,10 @@
+const addNewTask = (allTasksArray, taskName) =>{
+    debugger;
+    console.log (allTasksArray, ' ', taskName);
+    let newTask = {};
+    newTask.name = taskName;
+    newTask.status = 0;
+    allTasksArray.push(newTask);
+}
+
+export default addNewTask;
