@@ -8,19 +8,29 @@
       </path>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:fix" type="e8cecc67:BranchNodeDescriptor" />
       </path>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76b45fd0-1f9a-4d8c-a746-8b8bda9406b5" name="Default Changelist" comment="import isn't working">
+      <change afterPath="$PROJECT_DIR$/todo_react/src/utilites/utilites.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo_react/src/Components/InputDiv/InputDiv.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/todo_react/src/Components/InputDiv/InputDiv.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo_react/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/todo_react/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo_react/src/utilites/addNewTask" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +38,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="ImportBug" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="276OfOsTURnk4rBRvjAj76QXjWY" />
@@ -72,7 +87,8 @@
       <workItem from="1650469177817" duration="6777000" />
       <workItem from="1650537456600" duration="7259000" />
       <workItem from="1650965768680" duration="7808000" />
-      <workItem from="1651226761215" duration="736000" />
+      <workItem from="1651226761215" duration="8237000" />
+      <workItem from="1651306759699" duration="6404000" />
     </task>
     <task id="LOCAL-00001" summary="null">
       <created>1650043024408</created>
@@ -88,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650978220897</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="import isn't working">
+      <created>1651228415348</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1651228415348</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,7 +122,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -116,13 +151,29 @@
       <screen x="72" y="27" width="1208" height="773" />
     </state>
     <state x="378" y="215" width="618" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1208.773@72.27.1208.773" timestamp="1650537920072" />
+    <state x="409" y="162" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1651307656810">
+      <screen x="72" y="27" width="1208" height="773" />
+    </state>
+    <state x="409" y="162" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1208.773@72.27.1208.773" timestamp="1651307656810" />
+    <state x="453" y="160" width="424" height="520" key="FileChooserDialogImpl" timestamp="1651229558260">
+      <screen x="72" y="27" width="1208" height="773" />
+    </state>
+    <state x="453" y="160" width="424" height="520" key="FileChooserDialogImpl/72.27.1208.773@72.27.1208.773" timestamp="1651229558260" />
     <state x="165" y="48" width="1022" height="737" key="SettingsEditor" timestamp="1650979411038">
       <screen x="72" y="27" width="1208" height="773" />
     </state>
     <state x="165" y="48" width="1022" height="737" key="SettingsEditor/72.27.1208.773@72.27.1208.773" timestamp="1650979411038" />
-    <state x="271" y="149" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1650978390652">
+    <state x="271" y="149" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1651230544261">
       <screen x="72" y="27" width="1208" height="773" />
     </state>
-    <state x="271" y="149" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1208.773@72.27.1208.773" timestamp="1650978390652" />
+    <state x="271" y="149" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1208.773@72.27.1208.773" timestamp="1651230544261" />
+    <state x="372" y="202" width="597" height="430" key="git4idea.merge.GitMergeDialog" timestamp="1651229624909">
+      <screen x="72" y="27" width="1208" height="773" />
+    </state>
+    <state x="372" y="202" width="597" height="430" key="git4idea.merge.GitMergeDialog/72.27.1208.773@72.27.1208.773" timestamp="1651229624909" />
+    <state x="432" y="314" width="477" height="206" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1651228779045">
+      <screen x="72" y="27" width="1208" height="773" />
+    </state>
+    <state x="432" y="314" width="477" height="206" key="git4idea.remote.GitConfigureRemotesDialog/72.27.1208.773@72.27.1208.773" timestamp="1651228779045" />
   </component>
 </project>
