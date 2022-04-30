@@ -1,6 +1,6 @@
 import React from "react";
 import classes from './InputDiv.module.css';
-import addNewTask from '../../utilites/addNewTask'
+import {addNewTask} from "../../utilites/utilites";
 
 const InputDiv = (props) =>{
     let inputsRef = React.createRef();
