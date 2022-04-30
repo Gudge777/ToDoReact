@@ -4,7 +4,7 @@ import Task from "./Task/Task";
 
 const TasksDiv = (props) => {
     let tasksArray = props.state.tasks;
-    let tasksComponents = tasksArray.map (task => <Task task={task}/>)
+    let tasksComponents = tasksArray.map (task => <Task task={task} tasks={props.state.tasks}/>)
     return (<div>
         {tasksComponents}
     </div>);
