@@ -1,9 +1,11 @@
 import React from "react";
-import ReactDOM from 'react-dom';
 import {renderEntireTree} from "../index";
+import { v4 as uuidv4 } from 'uuid';
 
 export const addNewTask = (tasksArray, taskName) =>{
+    let id = uuidv4();
     let newTask = {
+        id: id,
         name:taskName,
         status:0
     };
@@ -11,6 +13,9 @@ export const addNewTask = (tasksArray, taskName) =>{
     renderEntireTree();
 };
 
-export const deleteNewTask = (tasksArray, id) =>{
-
+export const deleteTask = (tasksArray, id) =>{
+    for (let i = 0; i < tasksArray.length; i++){
+        if (tasksArray[i].id === id) tasksArray.splice(i,1);
+    }
+    renderEntireTree();
 }
