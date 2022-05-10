@@ -1,13 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import classes from './InputDiv.module.css';
-import {addNewTask} from "../../utilites/utilites";
 
 const InputDiv = (props) =>{
-    let inputsRef = React.createRef();
+    const store = props.store;
+    const [enteringTask, setEnteringTask] = useState('');
+    const handleAddClick = () => {
+        store.dispatch({type:'addTask', taskName:enteringTask});
+        setEnteringTask('');
+    }
+
     return (
         <div>
-            <input ref={inputsRef}/>
-            <button className={classes.addButton} onClick={() => addNewTask(props.tasks, inputsRef.current.value)}>
+            <input placeholder='Input task'
+            type={Text}
+            value={enteringTask}
+            onChange={(e) => setEnteringTask(e.target.value) }/>
+            <button className={classes.addButton} onClick={handleAddClick}>
                 Add
             </button>
         </div>
