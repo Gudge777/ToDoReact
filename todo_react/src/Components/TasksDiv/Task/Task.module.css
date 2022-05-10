@@ -1,6 +1,6 @@
 .task {
     display: grid;
-    grid-template-columns: 80% 1fr;
+    grid-template-columns: 80% 1fr 1fr;
     margin: 10px 10px 10px 10px;
 }
 
@@ -19,6 +19,12 @@
 
 .deleteButton {
     background-color: red;
+    box-shadow: 1px 1px 3px 3px lavender;
+    border-radius: 5px;
+}
+
+.completeButton {
+    background-color: grey;
     box-shadow: 1px 1px 3px 3px lavender;
     border-radius: 5px;
 }

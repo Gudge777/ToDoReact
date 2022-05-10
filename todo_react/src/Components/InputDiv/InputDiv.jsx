@@ -5,8 +5,9 @@ const InputDiv = (props) =>{
     const store = props.store;
     const [enteringTask, setEnteringTask] = useState('');
     const handleAddClick = () => {
-        store.dispatch({type:'addTask', taskName:enteringTask});
+        store.dispatch({type: 'addTask', taskName:enteringTask});
         setEnteringTask('');
+        store.dispatch({type: 'sortTasks'})
     }
 
     return (
