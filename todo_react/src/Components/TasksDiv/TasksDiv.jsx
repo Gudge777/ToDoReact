@@ -3,8 +3,8 @@ import classes from './TasksDiv.module.css';
 import Task from "./Task/Task";
 
 const TasksDiv = (props) => {
-    let tasksArray = props.state.tasks;
-    let tasksComponents = tasksArray.map (task => <Task task={task} tasks={props.state.tasks}/>)
+    let tasksArray = props.store.getState();
+    let tasksComponents = tasksArray.map (task => <Task task={task} store={props.store}/>)
     return (<div>
         {tasksComponents}
     </div>);
