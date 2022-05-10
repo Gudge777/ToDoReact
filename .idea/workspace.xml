@@ -25,19 +25,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76b45fd0-1f9a-4d8c-a746-8b8bda9406b5" name="Default Changelist" comment="addFeature/deleteTask">
-      <change afterPath="$PROJECT_DIR$/todo_react/src/redux/rootReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo_react/src/redux/store.js" afterDir="false" />
+    <list default="true" id="76b45fd0-1f9a-4d8c-a746-8b8bda9406b5" name="Default Changelist" comment="redux... REDUX!!!!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/todo_react/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/todo_react/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_react/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/todo_react/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_react/src/Components/InputDiv/InputDiv.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/todo_react/src/Components/InputDiv/InputDiv.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo_react/src/Components/TasksDiv/Task/Task.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/todo_react/src/Components/TasksDiv/Task/Task.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_react/src/Components/TasksDiv/TasksDiv.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/todo_react/src/Components/TasksDiv/TasksDiv.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_react/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/todo_react/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_react/src/state/state.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_react/src/utilites/utilites.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo_react/src/Components/TasksDiv/Task/Task.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/todo_react/src/Components/TasksDiv/Task/Task.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo_react/src/redux/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/todo_react/src/redux/rootReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +92,7 @@
       <workItem from="1651398998282" duration="6974000" />
       <workItem from="1651740278513" duration="2415000" />
       <workItem from="1651755930340" duration="2922000" />
-      <workItem from="1652173067209" duration="15187000" />
+      <workItem from="1652173067209" duration="17236000" />
     </task>
     <task id="LOCAL-00001" summary="null">
       <created>1650043024408</created>
@@ -137,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651328160424</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="redux... REDUX!!!!">
+      <created>1652196764939</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1652196764940</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +171,8 @@
     <MESSAGE value="import isn't working" />
     <MESSAGE value="fixed import, feature/addNewTask" />
     <MESSAGE value="addFeature/deleteTask" />
-    <option name="LAST_COMMIT_MESSAGE" value="addFeature/deleteTask" />
+    <MESSAGE value="redux... REDUX!!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="redux... REDUX!!!!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="134" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1651754205715">
@@ -195,14 +195,14 @@
       <screen x="72" y="27" width="1208" height="773" />
     </state>
     <state x="165" y="48" width="1022" height="737" key="SettingsEditor/72.27.1208.773@72.27.1208.773" timestamp="1650979411038" />
-    <state x="271" y="149" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1651328260155">
+    <state x="271" y="149" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1652196844682">
       <screen x="72" y="27" width="1208" height="773" />
     </state>
-    <state x="271" y="149" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1208.773@72.27.1208.773" timestamp="1651328260155" />
-    <state x="372" y="202" width="597" height="430" key="git4idea.merge.GitMergeDialog" timestamp="1651328315837">
+    <state x="271" y="149" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1208.773@72.27.1208.773" timestamp="1652196844682" />
+    <state x="372" y="202" width="607" height="430" key="git4idea.merge.GitMergeDialog" timestamp="1652196926999">
       <screen x="72" y="27" width="1208" height="773" />
     </state>
-    <state x="372" y="202" width="597" height="430" key="git4idea.merge.GitMergeDialog/72.27.1208.773@72.27.1208.773" timestamp="1651328315837" />
+    <state x="372" y="202" width="607" height="430" key="git4idea.merge.GitMergeDialog/72.27.1208.773@72.27.1208.773" timestamp="1652196926999" />
     <state x="327" y="202" width="688" height="430" key="git4idea.merge.GitPullDialog" timestamp="1651315402989">
       <screen x="72" y="27" width="1208" height="773" />
     </state>
