@@ -13,7 +13,7 @@ const InputDiv = (props) =>{
     return (
         <div>
             <input placeholder='Input task'
-            type={Text}
+            type = {'text'}
             value={enteringTask}
             onChange={(e) => setEnteringTask(e.target.value) }/>
             <button className={classes.addButton} onClick={handleAddClick}>
